@@ -25,7 +25,7 @@ function HomeNavbar() {
         <div className="hamburgr-menu lg:hidden">
           <div className="hamburger-btn">
             <button
-              className="border-[1px] border-white rounded-full p-3 hover:bg-[#FFAB17] transition duration-300 ease-in-out"
+              className="border-[1px] border-white rounded-full p-3 hover:bg-[#1e8947] transition duration-300 ease-in-out"
               onClick={() => setToggleMenu(!toggleMenu)}
             >
               <RxHamburgerMenu className="w-5 h-5" />
@@ -43,12 +43,12 @@ function HomeNavbar() {
             } overflow-y-auto z-50`}
           >
             <div className="logo-cross-btn flex justify-between items-center gap-x-10 pt-7 pb-16">
-              <div className="logo px-3 flex-grow-0">
+              <div className="logo px-3 ml-24">
                 <Link to="/">
-                  <img src={NavbarLogo} alt="" className="w-full" />
+                  <img src={ProgrammersMarathonLogo} alt="" className="w-32" />
                 </Link>
               </div>
-              <div className="btn px-3 flex-grow-[2]">
+              <div className="btn px-3">
                 <button onClick={() => setToggleMenu(!toggleMenu)}>
                   <MdOutlineCancel className="w-7 h-7" />
                 </button>
@@ -56,27 +56,23 @@ function HomeNavbar() {
             </div>
             <ul className="flex flex-col items-center justify-center text-center w-full">
               <li className="w-full border-t-[1px] border-b-[1px] border-white">
-                <span className="py-5 block hover:bg-[#FFAB17] transition duration-300 ease-in-out">
+                <span className="py-5 block hover:bg-[#1e8947] transition duration-300 ease-in-out">
                   <Link to="/">Home</Link>
                 </span>
               </li>
               <li className="w-full border-b-[1px] border-white">
-                <span className="py-5 block hover:bg-[#FFAB17] transition duration-300 ease-in-out">
+                <span className="py-5 block hover:bg-[#1e8947] transition duration-300 ease-in-out">
                   <Link to="/about">About</Link>
                 </span>
               </li>
               <li className="w-full border-b-[1px] border-white">
-                <span className="py-5 block hover:bg-[#FFAB17] transition duration-300 ease-in-out">
+                <span className="py-5 block hover:bg-[#1e8947] transition duration-300 ease-in-out">
                   <Link to="/contact">Contact</Link>
                 </span>
               </li>
+
               <li className="w-full border-b-[1px] border-white">
-                <span className="py-5 block hover:bg-[#FFAB17] transition duration-300 ease-in-out">
-                  <Link to="/login">Login</Link>
-                </span>
-              </li>
-              <li className="w-full border-b-[1px] border-white">
-                <span className="py-5 block hover:bg-[#FFAB17] transition duration-300 ease-in-out">
+                <span className="py-5 block hover:bg-[#1e8947] transition duration-300 ease-in-out">
                   <Link to="/register">Register</Link>
                 </span>
               </li>
@@ -87,7 +83,7 @@ function HomeNavbar() {
               </div>
               <div className="contact-all-information w-full flex flex-col gap-6">
                 <div className="location flex justify-start items-center">
-                  <div className="logo-info hover:bg-[#FFAB17] transition duration-300 ease-in-out p-4 rounded-md bg-[#2f2e2e]">
+                  <div className="logo-info hover:bg-[#1e8947] transition duration-300 ease-in-out p-4 rounded-md bg-[#2f2e2e]">
                     <GrLocation className="w-3 h-3 md:w-7 md:h-7" />
                   </div>
                   <div className="content-info px-4">
@@ -95,7 +91,7 @@ function HomeNavbar() {
                   </div>
                 </div>
                 <div className="call-number flex justify-start items-center">
-                  <div className="logo-info p-4 rounded-md bg-[#2f2e2e] hover:bg-[#FFAB17] transition duration-300 ease-in-out">
+                  <div className="logo-info p-4 rounded-md bg-[#2f2e2e] hover:bg-[#1e8947] transition duration-300 ease-in-out">
                     <IoCallOutline className="w-7 h-7" />
                   </div>
                   <div className="content-info px-4">
@@ -103,7 +99,7 @@ function HomeNavbar() {
                   </div>
                 </div>
                 <div className="gmail flex justify-start items-center">
-                  <div className="logo-info p-4 rounded-md bg-[#2f2e2e] hover:bg-[#FFAB17] transition duration-300 ease-in-out">
+                  <div className="logo-info p-4 rounded-md bg-[#2f2e2e] hover:bg-[#1e8947] transition duration-300 ease-in-out">
                     <MdOutlineMailOutline className="w-7 h-7" />
                   </div>
                   <div className="content-info px-4">
@@ -115,24 +111,22 @@ function HomeNavbar() {
           </div>
         </div>
         <ul className="justify-evenly items-center hidden lg:flex">
-          <li className="underline-animation">
+          <li className="underline-animation text-xl font-semibold">
             <Link to="/">Home</Link>
           </li>
-          <li className="underline-animation">
+          <li className="underline-animation text-xl font-semibold">
             <Link to="/about">About</Link>
           </li>
-          <li className="underline-animation">
+          <li className="underline-animation text-xl font-semibold">
             <Link to="/contact">Contact</Link>
           </li>
-          <li className="underline-animation">
-            <Link to="/login">Login</Link>
-          </li>
-          <li className="underline-animation">
+
+          <li className="underline-animation text-xl font-semibold">
             <Link to="/register">Register</Link>
           </li>
-          <li>
+          {/* <li>
             <Button content="Contact Us" />
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

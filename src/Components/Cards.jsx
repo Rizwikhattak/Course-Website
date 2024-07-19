@@ -1,38 +1,23 @@
 import React from "react";
 import Card from "./Card";
-import {
-  HiOutlineClipboardDocumentList,
-  HiOutlineBuildingLibrary,
-} from "react-icons/hi2";
-import { HiSpeakerphone } from "react-icons/hi";
-import { TbWorldCheck } from "react-icons/tb";
-import { ImStatsBars2 } from "react-icons/im";
-import { IoKey } from "react-icons/io5";
+import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
+
+import { BiSupport } from "react-icons/bi";
+
+import { MdOutlineAppRegistration } from "react-icons/md";
 
 const cardData = [
   {
-    icon: HiOutlineBuildingLibrary,
-    title: "Solution",
+    icon: MdOutlineAppRegistration,
+    title: "Register Here",
   },
   {
     icon: HiOutlineClipboardDocumentList,
-    title: "Service",
+    title: "Service's",
   },
   {
-    icon: HiSpeakerphone,
-    title: "Support",
-  },
-  {
-    icon: TbWorldCheck,
-    title: "Analysis",
-  },
-  {
-    icon: ImStatsBars2,
-    title: "Marketing",
-  },
-  {
-    icon: IoKey,
-    title: "Research",
+    icon: BiSupport,
+    title: "Seek Support",
   },
 ];
 
