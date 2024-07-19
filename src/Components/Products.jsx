@@ -68,15 +68,17 @@ const Products = () => {
           )}
         </ul>
       </div>
-      <div className="product-images-section overflow-x-hidden">
+      <div className="product-images-section overflow-x-hidden h-full w-full">
         <Slider {...settings}>
           {productData.map((currElem, currIndex) => {
             return (
-              <div className={`product-${currIndex + 1} relative`}>
-                <div>
-                  <img src={currElem.img} alt="" />
+              <div
+                className={`product-${currIndex + 1} relative w-full h-full`}
+              >
+                <div className="w-full h-full">
+                  <img src={currElem.img} alt="" className="w-full h-full" />
                 </div>
-                <div className="product-decription flex justify-between items-center gap-5 rounded-2xl h-56 w-[22rem] p-10 bg-white text-black absolute top-56">
+                <div className="product-decription flex justify-between items-center gap-5 rounded-2xl h-56 w-[22rem] p-10 bg-white text-black absolute top-[90%] left-[10%]">
                   <div>
                     <h1 className="font-bold text-xl pt-4">{currElem.title}</h1>
                     <p className="text-sm font-md text-gray-500">
