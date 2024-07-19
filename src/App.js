@@ -26,8 +26,8 @@ const App = () => {
         <About />
         <Cards />
         <Services />
-        <Products />
-        <ContactUs />
+        {/* <Products />
+        <ContactUs /> */}
       </Router>
     </>
   );

@@ -1,48 +1,15 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
+import { FaTimes } from "react-icons/fa";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { RiComputerLine } from "react-icons/ri";
-import { HiSpeakerphone } from "react-icons/hi";
-import { ImStatsBars2 } from "react-icons/im";
 import servicesMainImg from "../Assets/servicesMainImg.png";
-import servicesCaroouselImg_1 from "../Assets/servicesCarouselmg_1.jpeg";
-import servicesCaroouselImg_2 from "../Assets/servicesCarouselImg_2.jpeg";
-import servicesCaroouselImg_3 from "../Assets/servicesCarouselImg_3.jpeg";
-
-const carouselData = [
-  {
-    carouselImg: servicesCaroouselImg_1,
-    carouselIcon: RiComputerLine,
-    carouselTitle: "Computer Solution",
-    carouselDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eveniet in voluptatem totam id molestiae, fugit reiciendis placeat dolorem quas.",
-    hoverIcon: HiSpeakerphone,
-    hoverDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eveniet in voluptatem totam id molestiae, fugit reiciendis placeat dolorem quas.",
-  },
-  {
-    carouselImg: servicesCaroouselImg_2,
-    carouselIcon: HiSpeakerphone,
-    carouselTitle: "Product to Satelite",
-    carouselDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eveniet in voluptatem totam id molestiae, fugit reiciendis placeat dolorem quas.",
-    hoverIcon: HiSpeakerphone,
-    hoverDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eveniet in voluptatem totam id molestiae, fugit reiciendis placeat dolorem quas.",
-  },
-  {
-    carouselImg: servicesCaroouselImg_3,
-    carouselIcon: ImStatsBars2,
-    carouselTitle: "Computer Solution",
-    carouselDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eveniet in voluptatem totam id molestiae, fugit reiciendis placeat dolorem quas.",
-    hoverIcon: HiSpeakerphone,
-    hoverDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eveniet in voluptatem totam id molestiae, fugit reiciendis placeat dolorem quas.",
-  },
-];
+import servicesCaroouselImg_1 from "../Assets/ServicesCarouselImg_1.jpg";
+import servicesCaroouselImg_2 from "../Assets/ServicesCarouselImg_2.jpg";
+import servicesCaroouselImg_3 from "../Assets/ServicesCarouselImg_3.jpg";
+import servicesCaroouselImg_4 from "../Assets/ServicesCarouselImg_4.jpg";
+import servicesCaroouselImg_5 from "../Assets/ServicesCarouselImg_5.jpg";
 
 const CustomNextArrow = (props) => {
   const { className, onClick } = props;
@@ -69,6 +36,19 @@ const CustomPrevArrow = (props) => {
 };
 
 const Services = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openModal = (img) => {
+    setSelectedImage(img);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedImage(null);
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -110,52 +90,50 @@ const Services = () => {
         </h1>
       </div>
 
-      <div className="services-carousel px-5 mdsm:px-10 relative top-[-80px]">
+      <div className="services-carousel px-5 md:px-10 relative top-[-80px]">
         <Slider {...settings}>
-          {carouselData.map((currElem, cur) => (
+          {[
+            servicesCaroouselImg_1,
+            servicesCaroouselImg_2,
+            servicesCaroouselImg_3,
+            servicesCaroouselImg_4,
+            servicesCaroouselImg_5,
+          ].map((currElem, cur) => (
             <div
               key={cur}
-              className="group carousel-card w-[25%] h-[25%] text-black bg-white rounded-lg transition duration-500 ease-in-out relative"
+              className="carousel-card text-black bg-white rounded-lg"
+              onClick={() => openModal(currElem)}
             >
-              <div className="carImg opacity-100 group-hover:opacity-0">
+              <div className="carImg">
                 <img
-                  src={currElem.carouselImg}
+                  src={currElem}
                   alt=""
-                  className="rounded-lg w-full"
+                  className="w-full h-64 object-cover rounded-lg cursor-pointer"
                 />
-              </div>
-              <div className="carousel-content p-5 opacity-100 group-hover:opacity-0 group-hover:bg-[#FFAB17]">
-                <div className="logo-content flex items-center gap-4 pb-4">
-                  <div className="logo-car flex justify-center items-center bg-[#FFAB17] rounded-full w-12 h-12 text-white">
-                    <currElem.carouselIcon className="w-5 h-5" />
-                  </div>
-                  <div className="logo-car-content">
-                    <h1 className="text-bold">{currElem.carouselTitle}</h1>
-                  </div>
-                </div>
-                <div className="carouselDescription">
-                  <p className="text-sm font-thin">
-                    {currElem.carouselDescription}
-                  </p>
-                </div>
-              </div>
-              <div className="hover-content p-5 h-full w-full absolute top-0 left-0 text-white transition duration-500 ease-in-out rounded-lg opacity-0 group-hover:opacity-100 bg-[#FFAB17]">
-                <div className="logo-car flex justify-center items-center bg-black rounded-full w-12 h-12 text-white border-2 border-white mt-5">
-                  <currElem.hoverIcon className="w-5 h-5" />
-                </div>
-                <div className="hover-data py-3">
-                  <button className="pt-3 font-bold hover:text-black transition duration-500 ease-in-out">
-                    {currElem.carouselTitle}
-                  </button>
-                  <p className="py-3 text-sm font-thin">
-                    {currElem.hoverDescription}
-                  </p>
-                </div>
               </div>
             </div>
           ))}
         </Slider>
       </div>
+
+      {modalOpen && (
+        <div className="fixed inset-0 bg-blue-900 bg-opacity-25 flex justify-center items-center z-50">
+          <div className="relative max-w-full max-h-full flex items-center justify-center">
+            <button
+              className="absolute top-0 right-0 m-4 text-white text-2xl cursor-pointer z-20"
+              onClick={closeModal}
+            >
+              <FaTimes />
+            </button>
+            <img
+              src={selectedImage}
+              alt=""
+              className="max-h-[80vh] max-w-[90vw] object-contain"
+            />
+          </div>
+          <div className="absolute inset-0" onClick={closeModal}></div>
+        </div>
+      )}
     </section>
   );
 };
