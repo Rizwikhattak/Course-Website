@@ -1,5 +1,5 @@
 .heading-container {
-  text-align: center;
+  text-align: left;
 }
 .heading-container h1 {
   font-size: 36px;
@@ -8,11 +8,24 @@
   position: relative;
   display: inline-block;
 }
+@media only screen and (max-width: 680px) {
+  .heading-container h1 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #333;
+    position: relative;
+    display: inline-block;
+  }
+}
 .heading-container h1::after {
   content: "";
   display: block;
-  width: 150px;
-  height: 4px;
+  position: absolute;
+  left: 5px;
+
+  width: 75px;
+  height: 6px;
   background-color: #1e8947;
   margin: 8px auto 0;
+  margin-top: 15px;
 }
