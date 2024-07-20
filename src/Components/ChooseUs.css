@@ -1,0 +1,18 @@
+.heading-container {
+  text-align: center;
+}
+.heading-container h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  display: inline-block;
+}
+.heading-container h1::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 4px;
+  background-color: #1e8947;
+  margin: 8px auto 0;
+}

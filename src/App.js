@@ -11,6 +11,7 @@ import Cards from "./Components/Cards";
 import Services from "./Components/Services";
 import Products from "./Components/Products";
 import Courses from "./Components/Courses";
+import ChooseUs from "./Components/ChooseUs";
 const App = () => {
   return (
     <>
@@ -26,6 +27,7 @@ const App = () => {
         </Routes>
         <About />
         <Courses />
+        <ChooseUs />
         {/* <Cards /> */}
         {/* <Services /> */}
         {/* <Products />
