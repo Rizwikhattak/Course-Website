@@ -9,6 +9,11 @@ import DialogueApplyCourse from "./Utility Components/DialogueApplyCourse";
 const Courses = () => {
   const [openDialogue, setOpenDialogue] = useState(false);
   const [courseIndex, setCourseIndex] = useState(0);
+
+  function HandleOpenDialogueBox(val) {
+    setOpenDialogue(val);
+  }
+
   return (
     <section className="courses-page w-full h-full p-5 bg-[#242424] text-white flex justify-center items-center">
       <div className="our-course-category-section shadow-custom bg-white  rounded-3xl text-black p-5 w-full lgmd:w-[90%] slg:w-[80%] ">
@@ -63,7 +68,10 @@ const Courses = () => {
               <cite>{buttonsData[courseIndex].cite}</cite>
             </div>
             <div className="apply-course-btn py-3">
-              <button className=" w-42 h-12 text-center bg-[#1e8947] text-white rounded-xl hover:bg-white hover:text-[#1e8947] hover:border-[1px] hover:border-[#1e8947] transition duration-300 ease-in-out flex justify-center items-center p-5 gap-2">
+              <button
+                className=" w-42 h-12 text-center bg-[#1e8947] text-white rounded-xl hover:bg-white hover:text-[#1e8947] hover:border-[1px] hover:border-[#1e8947] transition duration-300 ease-in-out flex justify-center items-center p-5 gap-2"
+                onClick={() => HandleOpenDialogueBox(true)}
+              >
                 <span className="inline-block">Apply Here</span>
                 <span className="">
                   <FaRegHandPointer className="inline-block" />
@@ -84,7 +92,9 @@ const Courses = () => {
         </div>
       </div>
       <div>
-        <DialogueApplyCourse />
+        {openDialogue && (
+          <DialogueApplyCourse HandleOpenDialogueBox={HandleOpenDialogueBox} />
+        )}
       </div>
     </section>
   );
