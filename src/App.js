@@ -12,6 +12,7 @@ import Services from "./Components/Services";
 import Products from "./Components/Products";
 import Courses from "./Components/Courses";
 import ChooseUs from "./Components/ChooseUs";
+import WebDevCoursePage from "./Components/CoursePages/WebDevCoursePage";
 const App = () => {
   return (
     <>
@@ -20,11 +21,12 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <
+          <Route path="/" element={<About />} />
+          <Route path="/" element={<ChooseUs />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/WebDev" element={<WebDevCoursePage />} />
         </Routes>
-        <About />
-        <Courses />
-        <ChooseUs />
+
         {/* <Cards /> */}
         {/* <Services /> */}
         {/* <Products />

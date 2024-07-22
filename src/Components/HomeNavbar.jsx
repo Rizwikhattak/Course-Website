@@ -115,14 +115,14 @@ function HomeNavbar() {
             <Link to="/">Home</Link>
           </li>
           <li className="underline-animation text-xl font-semibold">
-            <Link to="/about">About</Link>
+            <Link to="/">About</Link>
           </li>
           <li className="underline-animation text-xl font-semibold">
-            <Link to="/contact">Contact</Link>
+            <Link to="/">Contact</Link>
           </li>
 
           <li className="underline-animation text-xl font-semibold">
-            <Link to="/register">Register</Link>
+            <Link to="/">Register</Link>
           </li>
           {/* <li>
             <Button content="Contact Us" />

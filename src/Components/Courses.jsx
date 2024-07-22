@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaComputer } from "react-icons/fa6";
 import { LuPaintBucket } from "react-icons/lu";
 import { FaRegCircleQuestion } from "react-icons/fa6";
@@ -68,15 +69,17 @@ const Courses = () => {
               <cite>{buttonsData[courseIndex].cite}</cite>
             </div>
             <div className="apply-course-btn py-3">
-              <button
-                className=" w-42 h-12 text-center bg-[#1e8947] text-white rounded-xl hover:bg-white hover:text-[#1e8947] hover:border-[1px] hover:border-[#1e8947] transition duration-300 ease-in-out flex justify-center items-center p-5 gap-2"
-                onClick={() => HandleOpenDialogueBox(true)}
-              >
-                <span className="inline-block">Apply Here</span>
-                <span className="">
-                  <FaRegHandPointer className="inline-block" />
-                </span>
-              </button>
+              <Link to="/WebDev">
+                <button
+                  className=" w-42 h-12 text-center bg-[#1e8947] text-white rounded-xl hover:bg-white hover:text-[#1e8947] hover:border-[1px] hover:border-[#1e8947] transition duration-300 ease-in-out flex justify-center items-center p-5 gap-2"
+                  onClick={() => HandleOpenDialogueBox(true)}
+                >
+                  <span className="inline-block">Apply Here</span>
+                  <span className="">
+                    <FaRegHandPointer className="inline-block" />
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
           <div className="clicked-images w-full flex-grow slg:flex-grow-[2]">
