@@ -91,11 +91,6 @@ const Courses = () => {
           </div>
         </div>
       </div>
-      <div>
-        {openDialogue && (
-          <DialogueApplyCourse HandleOpenDialogueBox={HandleOpenDialogueBox} />
-        )}
-      </div>
     </section>
   );
 };
