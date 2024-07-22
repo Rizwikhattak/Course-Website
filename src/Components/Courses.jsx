@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { FaComputer } from "react-icons/fa6";
 import { LuPaintBucket } from "react-icons/lu";
 import { FaRegCircleQuestion } from "react-icons/fa6";
+import { FaRegHandPointer } from "react-icons/fa6";
 import progMainAboutImg from "../Assets/progAboutMainImg.jpg";
 import "./Courses.css";
-
+import DialogueApplyCourse from "./Utility Components/DialogueApplyCourse";
 const Courses = () => {
+  const [openDialogue, setOpenDialogue] = useState(false);
   const [courseIndex, setCourseIndex] = useState(0);
   return (
     <section className="courses-page w-full h-full p-5 bg-[#242424] text-white flex justify-center items-center">
@@ -55,12 +57,19 @@ const Courses = () => {
               </h1>
             </div>
             <p className="">{buttonsData[courseIndex].description}</p>
-            {buttonsData[courseIndex].quotation && (
-              <div className="quote-container">
-                <blockquote>{buttonsData[courseIndex].quotation}</blockquote>
-                <cite>{buttonsData[courseIndex].cite}</cite>
-              </div>
-            )}
+
+            <div className="quote-container">
+              <blockquote>{buttonsData[courseIndex].quotation}</blockquote>
+              <cite>{buttonsData[courseIndex].cite}</cite>
+            </div>
+            <div className="apply-course-btn py-3">
+              <button className=" w-42 h-12 text-center bg-[#1e8947] text-white rounded-xl hover:bg-white hover:text-[#1e8947] hover:border-[1px] hover:border-[#1e8947] transition duration-300 ease-in-out flex justify-center items-center p-5 gap-2">
+                <span className="inline-block">Apply Here</span>
+                <span className="">
+                  <FaRegHandPointer className="inline-block" />
+                </span>
+              </button>
+            </div>
           </div>
           <div className="clicked-images w-full flex-grow slg:flex-grow-[2]">
             <div
@@ -73,6 +82,9 @@ const Courses = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <DialogueApplyCourse />
       </div>
     </section>
   );
