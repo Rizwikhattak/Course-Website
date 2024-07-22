@@ -6,6 +6,7 @@ import { FiWatch } from "react-icons/fi";
 import { GrCertificate } from "react-icons/gr";
 import { TbWorld } from "react-icons/tb";
 import { SlCalender } from "react-icons/sl";
+import { TiTick } from "react-icons/ti";
 import { LiaUniversalAccessSolid } from "react-icons/lia";
 import { MdOutlineHighQuality } from "react-icons/md";
 const WebDevCoursePage = () => {
@@ -102,32 +103,40 @@ const WebDevCoursePage = () => {
               key steps for setting up an effective front-end project.
             </p>
           </div>
-          <div className="course-fifth-section pl-5 py-5" id="StartDates">
+          <div className="course-fifth-section pl-5 py-5">
             <h1 className="font-semibold py-5 text-3xl">
               What will you achieve?
             </h1>
             <div className="content-ul">
-              <ul className="text-white list-disc list-inside space-y-3">
+              <ul className="text-white list-inside space-y-3">
                 {liContent.map((text, index) => (
-                  <li key={index}>{text}</li>
+                  <li key={index} className="flex items-center gap-x-2">
+                    <span>
+                      <TiTick className="w-5 h-5" />
+                    </span>
+                    <span>{text}</span>
+                  </li>
                 ))}
               </ul>
             </div>
           </div>
         </div>
-        <div className="course-sixth-section w-full">
-          <div className="course-sixth-content">
-            <h1>When Would You Like To Start?</h1>
+        <div className="course-sixth-section"></div>
+        <div className="course-seventh-section w-full pl-5" id="StartDates">
+          <div className="course-seventh-content">
+            <h1 className="font-semibold text-3xl py-5">
+              When Would You Like To Start?
+            </h1>
             <p>
               Start straight away and join a global classroom of learners. If
               the course hasn’t started yet you’ll see the future date listed
               below.
             </p>
           </div>
-          <div className="course-sixth-date w-full flex justify-between my-5 border-l-4 border-l-primary border-y-[1px] border-y-white pl-6 py-2">
+          <div className="course-seventh-date w-full flex justify-between items-center my-5 border-l-4 border-l-primary border-y-[1px] border-y-white pl-6 py-2">
             <div className="date-content-icon flex gap-x-2 items-center">
               <span>
-                <SlCalender />
+                <SlCalender className="w-6 h-6" />
               </span>
               <h1>Available Now</h1>
             </div>
