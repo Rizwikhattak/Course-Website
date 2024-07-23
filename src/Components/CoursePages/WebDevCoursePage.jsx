@@ -1,5 +1,6 @@
 import React from "react";
 import RegistrationCard from "./RegistrationCard";
+import CanvasWebDev from "./CanvasWebDev";
 import webDev_1 from "../../Assets/WebDev_1.jpg";
 import { CgSandClock } from "react-icons/cg";
 import { FiWatch } from "react-icons/fi";
@@ -7,8 +8,7 @@ import { GrCertificate } from "react-icons/gr";
 import { TbWorld } from "react-icons/tb";
 import { SlCalender } from "react-icons/sl";
 import { TiTick } from "react-icons/ti";
-import { LiaUniversalAccessSolid } from "react-icons/lia";
-import { MdOutlineHighQuality } from "react-icons/md";
+
 const WebDevCoursePage = () => {
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -121,7 +121,9 @@ const WebDevCoursePage = () => {
             </div>
           </div>
         </div>
-        <div className="course-sixth-section"></div>
+        <div className="course-sixth-section w-full h-full">
+          <CanvasWebDev />
+        </div>
         <div className="course-seventh-section w-full pl-5" id="StartDates">
           <div className="course-seventh-content">
             <h1 className="font-semibold text-3xl py-5">
