@@ -17,8 +17,8 @@ const WebDevCoursePage = () => {
     }
   };
   return (
-    <section className="web-dev-page h-full w-full flex justify-between bg-[#242424] p-5 ">
-      <div className="web-dev-content-data p-5 pl-20 text-white h-full w-[60%]">
+    <section className="web-dev-page h-full w-full block mlg:flex mlg:justify-between bg-[#242424] p-5 ">
+      <div className="web-dev-content-data p-5 mdsm:pl-20 text-white h-full w-full mlg:w-[60%]">
         <div className="content-first-section-course flex flex-col gap-y-3 pb-10">
           <h1 className="font-semibold text-xl">
             Getting Started with Front-End Web Development
@@ -32,7 +32,10 @@ const WebDevCoursePage = () => {
         <div className="course-image-section w-full h-[57%]">
           <img src={webDev_1} alt="" className="h-[100%] w-full" />
         </div>
-        <div className="course-second-section flex justify-between items-center py-10 text-white">
+        <div className="web-dev-reg-page pt-10 w-full block mlg:hidden pb-10">
+          <RegistrationCard />
+        </div>
+        <div className="course-second-section hidden mlg:flex   justify-between items-center py-10 text-white">
           {courseContent.map((currElem, currIndex) => {
             return (
               <div
@@ -55,6 +58,7 @@ const WebDevCoursePage = () => {
             );
           })}
         </div>
+
         <div className="course-third-section">
           <div className="course-btns flex justify-around py-3 px-5 bg-slate-500">
             {["OverView", "Start Dates", "Requirements"].map(
@@ -72,7 +76,7 @@ const WebDevCoursePage = () => {
             )}
           </div>
           <div className="course-fourth-section pl-5 py-10" id="OverView">
-            <h1 className="py-5 font-semibold text-3xl">
+            <h1 className="py-5 font-bold mdsm:font-semibold text-xl  mdsm:text-3xl">
               Learn How to Beome a Web Developer
             </h1>
             <p>
@@ -104,7 +108,7 @@ const WebDevCoursePage = () => {
             </p>
           </div>
           <div className="course-fifth-section pl-5 py-5">
-            <h1 className="font-semibold py-5 text-3xl">
+            <h1 className="py-5 font-bold mdsm:font-semibold text-xl mdsm:text-3xl">
               What will you achieve?
             </h1>
             <div className="content-ul">
@@ -126,7 +130,7 @@ const WebDevCoursePage = () => {
         </div>
         <div className="course-seventh-section w-full pl-5" id="StartDates">
           <div className="course-seventh-content">
-            <h1 className="font-semibold text-3xl py-5">
+            <h1 className="font-bold mdsm:font-semibold text-xl  mdsm:text-3xl py-5">
               When Would You Like To Start?
             </h1>
             <p>
@@ -135,22 +139,22 @@ const WebDevCoursePage = () => {
               below.
             </p>
           </div>
-          <div className="course-seventh-date w-full flex justify-between items-center my-5 border-l-4 border-l-primary border-y-[1px] border-y-white pl-6 py-2">
+          <div className="course-seventh-date w-full flex justify-between items-center my-5 border-l-4 border-l-primary border-y-[1px] border-y-white pl-3 mdsm:pl-6 py-2">
             <div className="date-content-icon flex gap-x-2 items-center">
               <span>
-                <SlCalender className="w-6 h-6" />
+                <SlCalender className="mdsm:w-6 mdsm:h-6 w-4 h-4" />
               </span>
               <h1>Available Now</h1>
             </div>
             <div className="date-btn">
-              <button className=" rounded-md py-1 px-5 bg-primary text-white hover:bg-white hover:text-primary transition duration-300 ease-in-out">
+              <button className=" rounded-md py-1 px-3 mdsm:px-5 bg-primary text-white hover:bg-white hover:text-primary transition duration-300 ease-in-out">
                 Enroll Now
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div className="web-dev-reg-page sticky w-[40%] ">
+      <div className="web-dev-reg-page w-[40%] relative hidden mlg:block">
         <RegistrationCard />
       </div>
     </section>

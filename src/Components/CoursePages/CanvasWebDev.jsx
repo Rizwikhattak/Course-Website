@@ -178,7 +178,7 @@ const CanvasWebDev = () => {
   const [state, dispatch] = useReducer(reducerFunction, initialCourses);
 
   return (
-    <div id="accordion-collapse" data-accordion="collapse">
+    <div className="my-3" id="accordion-collapse" data-accordion="collapse">
       <style jsx>{`
         .accordion-content {
           max-height: 0;
@@ -190,6 +190,10 @@ const CanvasWebDev = () => {
         }
       `}</style>
 
+      <h1 className="text-xl mdsm:text-5xl font-semibold text-center py-3">
+        What topics you will cover
+      </h1>
+
       {state.map(({ title, type, courseState, content }, index) => (
         <div key={index}>
           <h2 id={`accordion-collapse-heading-${type}`}>
@@ -200,7 +204,7 @@ const CanvasWebDev = () => {
               }
               ${
                 index == state.length - 1
-                  ? "border-b border-gray-200 dark:border-gray-700"
+                  ? " border-b-[1px] border-gray-200 dark:border-gray-700"
                   : ""
               }
               

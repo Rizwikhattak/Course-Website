@@ -6,10 +6,10 @@ import { LiaUniversalAccessSolid } from "react-icons/lia";
 import { MdOutlineHighQuality } from "react-icons/md";
 const RegistrationCard = () => {
   return (
-    <div className="registration-card bg-white p-5 rounded-md shadow-lg sticky">
+    <div className="registration-card bg-white p-5 rounded-md shadow-lg block text-black mlg:fixed mlg:top-[27%] mlg:right-[1.5%]">
       <div className="reg-content flex flex-col gap-y-3">
         <h1 className="font-semibold text-lg">
-          Getting Started with Front-End Web Development
+          Getting Started with Front-End Dev
         </h1>
         <p>
           Slots Available <span>30/30</span>
@@ -22,6 +22,11 @@ const RegistrationCard = () => {
             </p>
           );
         })}
+      </div>
+      <div className="reg-btn py-3">
+        <button className="py-2 rounded-md text-center w-full bg-primary text-white hover:bg-white hover:text-primary hover:border hover:border-primary transition duration-300 ease-in-out ">
+          Join Us
+        </button>
       </div>
     </div>
   );
