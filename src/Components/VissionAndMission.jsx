@@ -5,15 +5,15 @@ import "./ChooseUs.css";
 const VissionAndMission = () => {
   return (
     <section className="px-5 py-16 bg-[#242424] flex justify-center items-center">
-      <div className="bg-white w-full mdsm:w-[80%] rounded-3xl shadow-inner-custom px-12 mdsm:px-28 py-12 flex justify-center items-center flex-col-reverse mlg:flex-row gap-10">
-        <div className="vissionAndMission-img">
+      <div className="bg-white w-full mdsm:w-[80%] rounded-3xl shadow-inner-custom px-4 mdsm:px-8 py-12 flex items-center justify-center flex-col-reverse mlg:flex-row gap-10">
+        <div className="vissionAndMission-img w-[40%] h-full">
           <img
             src={VissionAndMissionImg}
             alt=""
             className="w-full h-full rounded-3xl"
           />
         </div>
-        <div className="content-vissionAndMission">
+        <div className="content-vissionAndMission w-[60%]">
           <div className="para-choosUs">
             <div className="main-heading heading-container text-left">
               <h1 className="pb-8 pt-3 font-bold text-xl mdsm:text-3xl">

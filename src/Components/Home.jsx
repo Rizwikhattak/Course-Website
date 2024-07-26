@@ -8,6 +8,8 @@ import About from "./About";
 import ChooseUs from "./ChooseUs";
 import Courses from "./Courses";
 import VisionAndMission from "./VissionAndMission";
+import Faqs from "./Faqs";
+import Motive from "./Motive";
 
 const Home = () => {
   return (
@@ -64,6 +66,8 @@ const Home = () => {
       <ChooseUs />
       <Courses />
       <VisionAndMission />
+      <Faqs />
+      <Motive />
     </>
   );
 };
