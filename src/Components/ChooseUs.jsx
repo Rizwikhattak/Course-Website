@@ -4,7 +4,7 @@ import whyChooseUseImg from "../Assets/whyChooseUsImg.jpg";
 const ChooseUs = () => {
   return (
     <section className="px-5 py-16 bg-[#242424] flex justify-center items-center">
-      <div className="bg-white w-full mdsm:w-[80%] rounded-3xl shadow-custom px-12 mdsm:px-28 py-12 flex justify-center items-center flex-col-reverse mlg:flex-row gap-10">
+      <div className="bg-white w-full mdsm:w-[80%] rounded-3xl shadow-inner-custom px-12 mdsm:px-28 py-12 flex justify-center items-center flex-col-reverse mlg:flex-row gap-10">
         <div className="chooseUs-img">
           <img
             src={whyChooseUseImg}

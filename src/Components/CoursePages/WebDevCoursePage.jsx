@@ -8,6 +8,7 @@ import { GrCertificate } from "react-icons/gr";
 import { TbWorld } from "react-icons/tb";
 import { SlCalender } from "react-icons/sl";
 import { TiTick } from "react-icons/ti";
+import { Link } from "react-router-dom";
 
 const WebDevCoursePage = () => {
   const scrollToSection = (id) => {
@@ -147,9 +148,11 @@ const WebDevCoursePage = () => {
               <h1>Available Now</h1>
             </div>
             <div className="date-btn">
-              <button className=" rounded-md py-1 px-3 mdsm:px-5 bg-primary text-white hover:bg-white hover:text-primary transition duration-300 ease-in-out">
-                Enroll Now
-              </button>
+              <Link to="/RegistrationForm">
+                <button className=" rounded-md py-1 px-3 mdsm:px-5 bg-primary text-white hover:bg-white hover:text-primary transition duration-300 ease-in-out">
+                  Enroll Now
+                </button>
+              </Link>
             </div>
           </div>
         </div>

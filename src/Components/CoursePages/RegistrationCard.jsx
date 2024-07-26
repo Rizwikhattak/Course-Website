@@ -50,11 +50,11 @@ const regContent = [
     icon: GrCertificate,
   },
   {
-    text: "Course Access:Free",
+    text: "Course Access: Free",
     icon: LiaUniversalAccessSolid,
   },
   {
-    text: "Course Quality:Advanced",
+    text: "Course Quality: Advanced",
     icon: MdOutlineHighQuality,
   },
 ];

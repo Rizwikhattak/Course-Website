@@ -13,6 +13,7 @@ import Products from "./Components/Products";
 import Courses from "./Components/Courses";
 import ChooseUs from "./Components/ChooseUs";
 import WebDevCoursePage from "./Components/CoursePages/WebDevCoursePage";
+import RegistrationForm from "./Components/RegistrationPage/RegistrationForm";
 const App = () => {
   return (
     <>
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/" element={<ChooseUs />} />
           <Route path="/" element={<Home />} />
           <Route path="/WebDev" element={<WebDevCoursePage />} />
+          <Route path="/RegistrationForm" element={<RegistrationForm />} />
         </Routes>
 
         {/* <Cards /> */}
