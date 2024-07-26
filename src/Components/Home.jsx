@@ -7,6 +7,7 @@ import "./Home.css";
 import About from "./About";
 import ChooseUs from "./ChooseUs";
 import Courses from "./Courses";
+import VisionAndMission from "./VissionAndMission";
 
 const Home = () => {
   return (
@@ -62,6 +63,7 @@ const Home = () => {
       <About />
       <ChooseUs />
       <Courses />
+      <VisionAndMission />
     </>
   );
 };
