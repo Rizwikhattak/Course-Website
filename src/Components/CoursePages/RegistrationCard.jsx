@@ -4,6 +4,7 @@ import { FiWatch } from "react-icons/fi";
 import { GrCertificate } from "react-icons/gr";
 import { LiaUniversalAccessSolid } from "react-icons/lia";
 import { MdOutlineHighQuality } from "react-icons/md";
+import { Link } from "react-router-dom";
 const RegistrationCard = () => {
   return (
     <div className="registration-card bg-white p-5 rounded-md shadow-lg block text-black mlg:fixed mlg:top-[27%] mlg:right-[1.5%]">
@@ -24,9 +25,11 @@ const RegistrationCard = () => {
         })}
       </div>
       <div className="reg-btn py-3">
-        <button className="py-2 rounded-md text-center w-full bg-primary text-white hover:bg-white hover:text-primary hover:border hover:border-primary transition duration-300 ease-in-out ">
-          Join Us
-        </button>
+        <Link to="/RegistrationForm">
+          <button className="py-2 rounded-md text-center w-full bg-primary text-white hover:bg-white hover:text-primary hover:border hover:border-primary transition duration-300 ease-in-out ">
+            Join Us
+          </button>
+        </Link>
       </div>
     </div>
   );
@@ -34,12 +37,8 @@ const RegistrationCard = () => {
 
 const regContent = [
   {
-    text: "4.5 Months",
+    text: "3 Months",
     icon: CgSandClock,
-  },
-  {
-    text: "8 hours per week",
-    icon: FiWatch,
   },
   {
     text: "8 hours per week",

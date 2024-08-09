@@ -1,19 +1,13 @@
 import React from "react";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
-import HomeNavbar from "./Components/HomeNavbar";
-import Home from "./Components/Home";
-import About from "./Components/About";
-import ContactUs from "./Components/ContactUs";
-import Register from "./Components/Register";
-import Login from "./Components/Login";
-import Cards from "./Components/Cards";
-import Services from "./Components/Services";
-import Products from "./Components/Products";
-import Courses from "./Components/Courses";
-import ChooseUs from "./Components/ChooseUs";
+import HomeNavbar from "./Components/Navbar/HomeNavbar";
+import Home from "./Components/Home/Home";
+import About from "./Components/About/About";
+import ChooseUs from "./Components/Utility Components/ChooseUs";
 import WebDevCoursePage from "./Components/CoursePages/WebDevCoursePage";
 import RegistrationForm from "./Components/RegistrationPage/RegistrationForm";
+import Footer from "./Components/Footer/Footer";
 const App = () => {
   return (
     <>
@@ -28,6 +22,8 @@ const App = () => {
           <Route path="/WebDev" element={<WebDevCoursePage />} />
           <Route path="/RegistrationForm" element={<RegistrationForm />} />
         </Routes>
+
+        <Footer />
 
         {/* <Cards /> */}
         {/* <Services /> */}

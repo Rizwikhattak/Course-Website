@@ -18,6 +18,8 @@ module.exports = {
       boxShadow: {
         custom: "0 7px 100px rgb(255 250 250 / 50%)", // Custom shadow
         "inner-custom": "inset 0 7px 100px rgb(255 250 250 / 50%)",
+        customSm: "0 7px 62px 13px rgb(255 250 250 / 50%)", // Custom shadow
+        "inner-custom": "inset 0 7px 100px rgb(255 250 250 / 50%)",
       },
       screens: {
         slg: "960px",
