@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import ModalRegistration from "./ModalRegistration.jsx";
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,37 @@ const RegistrationForm = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const checkAllFields = () => {
+    const {
+      firstName,
+      lastName,
+      city,
+      email,
+      phone,
+      education,
+      course,
+      gender,
+    } = formData;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (
+      firstName.length > 0 &&
+      lastName.length > 0 &&
+      city.length > 0 &&
+      email.match(emailPattern) &&
+      phone.length >= 11 &&
+      education.length > 0 &&
+      course.length > 0 &&
+      gender.length > 0
+    ) {
+      toggleModal();
+    }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -40,14 +72,14 @@ const RegistrationForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    sendEmail();
     if (isSubmitting) return;
 
     setIsSubmitting(true);
 
     try {
       const response = await fetch(
-        "http://localhost/programmersmarathon/storeStudentsData.php",
+        "http://programmersmarathon.wuaze.com/?i=1",
         {
           method: "POST",
           headers: {
@@ -59,14 +91,14 @@ const RegistrationForm = () => {
 
       const result = await response.json();
       if (result.success) {
-        alert("Form submitted successfully!");
-        sendEmail(); // Send email on successful form submission
+        // alert("Form submitted successfully!");
+        // Send email on successful form submission
       } else {
-        alert("Error submitting form.");
+        // alert("Error submitting form." + result);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Error submitting form.");
+      // alert("Error submitting form.");
     } finally {
       setIsSubmitting(false);
     }
@@ -272,12 +304,14 @@ const RegistrationForm = () => {
               type="submit"
               className="text-white bg-blue-700 mt-1 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               disabled={isSubmitting}
+              onClick={checkAllFields}
             >
               Submit
             </button>
           </form>
         </div>
       </div>
+      <ModalRegistration toggleModal={toggleModal} isOpen={isOpen} />
     </section>
   );
 };

@@ -72,13 +72,24 @@ const Courses = () => {
                 <cite>{buttonsData[courseIndex].cite}</cite>
               </div>
               {buttonsData[courseIndex].availaiblitiy === "Availaible" && (
-                <div className="apply-course-btn py-3">
+                <div className="apply-course-btn py-3 flex gap-3 flex-wrap">
                   <Link to="/WebDev">
                     <button
                       className=" w-42 h-12 text-center bg-[#1e8947] text-white rounded-xl hover:bg-white hover:text-[#1e8947] hover:border-[1px] hover:border-[#1e8947] transition duration-300 ease-in-out flex justify-center items-center p-5 gap-2"
                       onClick={() => HandleOpenDialogueBox(true)}
                     >
                       <span className="inline-block">Apply Here</span>
+                      <span className="">
+                        <FaRegHandPointer className="inline-block" />
+                      </span>
+                    </button>
+                  </Link>
+                  <Link to="/CourseMaterial">
+                    <button
+                      className=" w-42 h-12 text-center bg-[#1e8947] text-white rounded-xl hover:bg-white hover:text-[#1e8947] hover:border-[1px] hover:border-[#1e8947] transition duration-300 ease-in-out flex justify-center items-center p-5 gap-2"
+                      onClick={() => HandleOpenDialogueBox(true)}
+                    >
+                      <span className="inline-block">Course Material</span>
                       <span className="">
                         <FaRegHandPointer className="inline-block" />
                       </span>
