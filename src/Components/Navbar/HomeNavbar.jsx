@@ -17,7 +17,7 @@ function HomeNavbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <nav className="navbar bg-[#242424] text-white overflow-x-hidden   flex justify-between pt-8 py-5 px-12 items-center">
+    <nav className="navbar bg-transparent z-50  text-white overflow-x-hidden flex justify-between pt-8 py-5 px-12 items-center">
       <div className="navbar-logo flex-grow">
         <Link to="/">
           <img src={ProgrammersMarathonLogo} alt="" className=" w-[12rem]" />
@@ -28,7 +28,7 @@ function HomeNavbar() {
         <div className="hamburgr-menu lg:hidden">
           <div className="hamburger-btn">
             <button
-              className="border-[1px] border-white rounded-full p-3 hover:bg-[#1e8947] transition duration-300 ease-in-out"
+              className="border-[1px] border-white rounded-full p-3 hover:bg-primary transition duration-300 ease-in-out"
               onClick={() => setToggleMenu(!toggleMenu)}
             >
               <RxHamburgerMenu className="w-5 h-5" />
@@ -41,7 +41,7 @@ function HomeNavbar() {
             ></div>
           )}
           <div
-            className={`hamburger-menu-items fixed bg-[#242424] py-5 h-full w-52 md:w-80 right-0 top-0 transform transition-transform duration-300 ease-in-out ${
+            className={`hamburger-menu-items fixed bg-secondary py-5 h-full w-52 md:w-80 right-0 top-0 transform transition-transform duration-300 ease-in-out ${
               toggleMenu ? "translate-x-0" : "translate-x-full"
             } overflow-y-auto z-50`}
           >
@@ -63,12 +63,12 @@ function HomeNavbar() {
             </div>
             <ul className="flex flex-col items-center justify-center text-center w-full">
               <li className="w-full border-t-[1px] border-b-[1px] border-white">
-                <span className="py-5 block hover:bg-[#1e8947] transition duration-300 ease-in-out">
+                <span className="py-5 block hover:bg-primary transition duration-300 ease-in-out">
                   <Link to="/">Home</Link>
                 </span>
               </li>
               <li className="w-full border-b-[1px] border-white">
-                <span className="py-5 block hover:bg-[#1e8947] transition duration-300 ease-in-out">
+                <span className="py-5 block hover:bg-primary transition duration-300 ease-in-out">
                   <ScrollLink
                     to="about"
                     smooth={true}
@@ -81,7 +81,7 @@ function HomeNavbar() {
                 </span>
               </li>
               <li className="w-full border-b-[1px] border-white cursor-pointer">
-                <span className="py-5 block hover:bg-[#1e8947] transition duration-300 ease-in-out">
+                <span className="py-5 block hover:bg-primary transition duration-300 ease-in-out">
                   <ScrollLink
                     to="contact"
                     smooth={true}
@@ -95,7 +95,7 @@ function HomeNavbar() {
               </li>
 
               <li className="w-full border-b-[1px] border-white">
-                <span className="py-5 block hover:bg-[#1e8947] transition duration-300 ease-in-out">
+                <span className="py-5 block hover:bg-primary transition duration-300 ease-in-out">
                   <Link to="/RegistrationForm">Register</Link>
                 </span>
               </li>
@@ -106,7 +106,7 @@ function HomeNavbar() {
               </div>
               <div className="contact-all-information w-full flex flex-col gap-6">
                 <div className="location flex justify-start items-center">
-                  <div className="logo-info hover:bg-[#1e8947] transition duration-300 ease-in-out p-4 rounded-md bg-[#2f2e2e]">
+                  <div className="logo-info hover:bg-primary transition duration-300 ease-in-out p-4 rounded-md bg-[#2f2e2e]">
                     <GrLocation className="w-3 h-3 md:w-7 md:h-7" />
                   </div>
                   <div className="content-info px-4">
@@ -114,7 +114,7 @@ function HomeNavbar() {
                   </div>
                 </div>
                 <div className="call-number flex justify-start items-center">
-                  <div className="logo-info p-4 rounded-md bg-[#2f2e2e] hover:bg-[#1e8947] transition duration-300 ease-in-out">
+                  <div className="logo-info p-4 rounded-md bg-[#2f2e2e] hover:bg-primary transition duration-300 ease-in-out">
                     <IoCallOutline className="w-3 h-3 md:w-7 md:h-7" />
                   </div>
                   <div className="content-info px-4">
@@ -122,7 +122,7 @@ function HomeNavbar() {
                   </div>
                 </div>
                 <div className="gmail flex justify-start items-center">
-                  <div className="logo-info p-4 rounded-md bg-[#2f2e2e] hover:bg-[#1e8947] transition duration-300 ease-in-out">
+                  <div className="logo-info p-4 rounded-md bg-[#2f2e2e] hover:bg-primary transition duration-300 ease-in-out">
                     <MdOutlineMailOutline className="w-3 h-3 md:w-7 md:h-7" />
                   </div>
                   <div className="content-info px-4">
@@ -136,7 +136,7 @@ function HomeNavbar() {
           </div>
         </div>
         <ul className="justify-evenly items-center hidden lg:flex">
-          <li className="underline-animation text-xl font-semibold">
+          <li className="underline-animation text-xl font-semibold curs">
             <Link to="/">Home</Link>
           </li>
           <li className="underline-animation text-xl font-semibold cursor-pointer">

@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 const ChooseUs = () => {
   return (
     <Fade bottom duration={1000}>
-      <section className="px-5 py-16 bg-[#242424] flex justify-center items-center">
+      <section className="px-5 py-16 bg-secondary flex justify-center items-center">
         <div className="bg-white w-full mdsm:w-[80%] rounded-3xl shadow-inner-custom px-5 mdsm:pl-6 mdsm:pr-28 py-12 flex justify-center items-center flex-col-reverse mlg:flex-row gap-10">
           <div className="chooseUs-img w-[100%] mdsm:w-[40%]">
             <img

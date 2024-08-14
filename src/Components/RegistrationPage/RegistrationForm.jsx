@@ -52,62 +52,40 @@ const RegistrationForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const sendEmail = () => {
-    emailjs
-      .send(
-        "service_abel4tc", // replace with your EmailJS service ID
-        "template_zr3fujg", // replace with your EmailJS template ID
-        formData,
-        "HVoAjmeGyDA39Aytg" // replace with your EmailJS user ID
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        (error) => {
-          console.log("FAILED...", error);
-        }
-      );
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    sendEmail();
     if (isSubmitting) return;
 
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(
-        "http://programmersmarathon.wuaze.com/?i=1",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch("http://localhost:5000/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-      const result = await response.json();
-      if (result.success) {
-        // alert("Form submitted successfully!");
-        // Send email on successful form submission
+      if (response.ok) {
+        console.log("Email sent successfully");
+        // Handle success (e.g., show a success message)
       } else {
-        // alert("Error submitting form." + result);
+        console.log("Failed to send email");
+        // Handle failure (e.g., show an error message)
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
-      // alert("Error submitting form.");
+      console.error("Error:", error);
+      // Handle error (e.g., show an error message)
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <section className="registration-form-page bg-[#242424] h-screen w-full flex justify-center items-center p-5">
+    <section className="registration-form-page bg-secondary h-screen w-full flex justify-center items-center p-5">
       <div className="form-section w-full h-full lgmd:w-[60%] flex justify-between bg-white shadow-custom rounded-2xl">
-        <div className="form-nav-btns w-[40%] rounded-l-xl flex flex-col gap-y-5 text-white bg-custom-gradient p-5 h-full">
+        <div className="form-nav-btns w-[40%] rounded-l-xl flex flex-col gap-y-5 text-white bg-custom-green-gradient p-5 h-full">
           <h1 className="lgmd:text-xl font-semibold">
             Welcome to Programmers Marathon
           </h1>
@@ -302,7 +280,7 @@ const RegistrationForm = () => {
             </fieldset>
             <button
               type="submit"
-              className="text-white bg-blue-700 mt-1 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="text-white my-0 mdsm:my-5 bg-blue-700 mt-1 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               disabled={isSubmitting}
               onClick={checkAllFields}
             >

@@ -1,5 +1,5 @@
 .quote-container {
-  border-left: 4px solid #1e8947;
+  border-left: 4px solid #25d366;
   padding-left: 20px;
   margin: 20px;
   position: relative;
@@ -12,7 +12,7 @@
 .quote-container::before {
   content: "“";
   font-size: 50px;
-  color: #333;
+  color: black;
   position: absolute;
   top: 10px;
   left: -30px;
@@ -20,7 +20,7 @@
 .quote-container::after {
   content: "”";
   font-size: 50px;
-  color: #333;
+  color: black;
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -36,11 +36,19 @@ cite {
   margin-top: 10px;
   font-size: 16px;
   font-weight: bold;
-  color: #333;
+  color: black;
 }
 .courses-page .heading-container {
   text-align: center;
 }
+.courses-page .heading-container h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  display: inline-block;
+}
+
 .heading-container h1 {
   font-size: 36px;
   font-weight: bold;
@@ -48,13 +56,14 @@ cite {
   position: relative;
   display: inline-block;
 }
+
 .heading-container h1::after {
   content: "";
   display: block;
   width: 150px;
   height: 4px;
-  background-color: #1e8947;
-  margin: 8px auto 0;
+  background-color: #25d366;
+  margin: 12px auto 0;
 }
 .course-category-buttons-container {
   padding-bottom: 1rem; /* Space below buttons for scroll bar */

@@ -18,7 +18,7 @@ const WebDevCoursePage = () => {
     }
   };
   return (
-    <section className="web-dev-page h-full w-full block mlg:flex mlg:justify-between bg-[#242424] p-5 ">
+    <section className="web-dev-page h-full w-full block mlg:flex mlg:justify-between bg-secondary p-5 ">
       <div className="web-dev-content-data p-5 mdsm:pl-20 text-white h-full w-full mlg:w-[60%]">
         <div className="content-first-section-course flex flex-col gap-y-3 pb-10">
           <h1 className="font-semibold text-xl">
@@ -147,7 +147,7 @@ const WebDevCoursePage = () => {
             </div>
             <div className="date-btn">
               <Link to="/RegistrationForm">
-                <button className=" rounded-md py-1 px-3 mdsm:px-5 bg-primary text-white hover:bg-white hover:text-primary transition duration-300 ease-in-out">
+                <button className=" rounded-md py-1  px-3 mdsm:px-5 bg-primary text-white hover:bg-white hover:text-primary transition duration-300 ease-in-out">
                   Enroll Now
                 </button>
               </Link>

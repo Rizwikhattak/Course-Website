@@ -16,7 +16,7 @@ import { MdEmail } from "react-icons/md";
 const Footer = () => {
   return (
     <Element name="contact" className="element">
-      <section className="footer p-5 bg-white h-[80%] flex justify-between items-center">
+      <section className="footer p-5 bg-white h-full w-full mt-[13%] flex justify-between items-center">
         <div className="w-full h-full py-5">
           <h1 className="text-center pb-5 font-semibold text-2xl">
             Visit Our Socials

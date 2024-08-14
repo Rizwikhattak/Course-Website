@@ -8,7 +8,8 @@ import FrontEndDevelopment from "../../Assets/progAboutMainImg.jpg";
 import graphicsDesining from "../../Assets/CoursesImg_2.jpg";
 import "./Courses.css";
 import Fade from "react-reveal/Fade";
-
+import CardsImg from "../../Assets/CardsImg.png";
+import BgGreenImg from "../../Assets/3.svg";
 const Courses = () => {
   const [openDialogue, setOpenDialogue] = useState(false);
   const [courseIndex, setCourseIndex] = useState(0);
@@ -19,10 +20,16 @@ const Courses = () => {
 
   return (
     <Fade bottom duration={1000}>
-      <section className="courses-page w-full h-full p-5 pb-16 bg-[#242424] text-white flex justify-center items-center">
-        <div className="our-course-category-section shadow-customSm mdsm:shadow-custom bg-white  rounded-3xl text-black p-5 w-full lgmd:w-[90%] slg:w-[80%] ">
+      <section className="courses-page w-full h-full p-5 pb-16 bg-secondary text-white flex justify-center items-center z-40 relative">
+        <div className="green-bg-img absolute top-[20%] right-0">
+          <img src={BgGreenImg} alt="" />
+        </div>
+        <div
+          className="our-course-category-section   
+          rounded-3xl text-black p-5 w-full lgmd:w-[90%] slg:w-[80%] bg-white "
+        >
           <div className="main-heading heading-container">
-            <h1 className=" text-left mdsm:text-center pt-5 pb-16 font-semibold text-[20px] mdsm:text-3xl">
+            <h1 className=" text-left mdsm:text-center pt-5 pb-16 font-semibold text-[28px] mdsm:text-3xl">
               Our Course Category
             </h1>
           </div>
@@ -36,7 +43,7 @@ const Courses = () => {
                   } relative font-semibold px-4 py-2 mx-4 transition-all duration-300 ${
                     courseIndex === currIndex
                       ? "active-button"
-                      : "hover:text-[#1e8947] before:transition-all before:content-[''] before:absolute before:-bottom-3 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-0.5 before:opacity-0 before:rounded-lg hover:before:bg-gradient-to-r hover:before:from-primary hover:before:to-green-950 hover:before:w-10/12 hover:before:opacity-100"
+                      : "hover:text-primary before:transition-all before:content-[''] before:absolute before:-bottom-3 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-0.5 before:opacity-0 before:rounded-lg hover:before:bg-gradient-to-r hover:before:from-primary hover:before:to-green-950 hover:before:w-10/12 hover:before:opacity-100"
                   }`}
                   onClick={() => setCourseIndex(currIndex)}
                 >
@@ -58,7 +65,7 @@ const Courses = () => {
                 <h1
                   className={` ${
                     buttonsData[courseIndex].availaiblitiy == "Availaible"
-                      ? "bg-[#1e8947] px-10 py-2"
+                      ? "bg-primary px-10 py-2"
                       : "bg-red-600 px-5 py-2"
                   } px-10 py-2 rounded-lg text-white`}
                 >
@@ -67,7 +74,7 @@ const Courses = () => {
               </div>
               <p className="">{buttonsData[courseIndex].description}</p>
 
-              <div className="quote-container">
+              <div className="quote-container text-black">
                 <blockquote>{buttonsData[courseIndex].quotation}</blockquote>
                 <cite>{buttonsData[courseIndex].cite}</cite>
               </div>
@@ -75,7 +82,7 @@ const Courses = () => {
                 <div className="apply-course-btn py-3 flex gap-3 flex-wrap">
                   <Link to="/WebDev">
                     <button
-                      className=" w-42 h-12 text-center bg-[#1e8947] text-white rounded-xl hover:bg-white hover:text-[#1e8947] hover:border-[1px] hover:border-[#1e8947] transition duration-300 ease-in-out flex justify-center items-center p-5 gap-2"
+                      className=" w-42 h-12 text-center bg-primary text-white rounded-xl hover:bg-white hover:text-primary hover:border-[1px] hover:border-primary transition duration-300 ease-in-out flex justify-center items-center p-5 gap-2"
                       onClick={() => HandleOpenDialogueBox(true)}
                     >
                       <span className="inline-block">Apply Here</span>
@@ -86,7 +93,7 @@ const Courses = () => {
                   </Link>
                   <Link to="/CourseMaterial">
                     <button
-                      className=" w-42 h-12 text-center bg-[#1e8947] text-white rounded-xl hover:bg-white hover:text-[#1e8947] hover:border-[1px] hover:border-[#1e8947] transition duration-300 ease-in-out flex justify-center items-center p-5 gap-2"
+                      className=" w-42 h-12 text-center bg-primary text-white rounded-xl hover:bg-white hover:text-primary hover:border-[1px] hover:border-primary transition duration-300 ease-in-out flex justify-center items-center p-5 gap-2"
                       onClick={() => HandleOpenDialogueBox(true)}
                     >
                       <span className="inline-block">Course Material</span>

@@ -3,6 +3,7 @@ import CircleAboutImg from "../../Assets/circleAboutImg.png";
 import progMainAboutImg from "../../Assets/AboutImg.jpg";
 import { IoMdCheckboxOutline } from "react-icons/io";
 import CountUp from "react-countup";
+import BigLeftBlueImg from "../../Assets/4.svg";
 import {
   Link as ScrollLink,
   Element,
@@ -33,25 +34,27 @@ const About = () => {
     <Element name="about" className="element">
       <section
         id="about"
-        className="About-Section px-5 mdsm:px-12 py-24 text-white bg-[#242424] h-full w-full flex flex-col lg:flex-row gap-y-5 mdsm:gap-y-10 lg:gap-x-10 justify-center lg:justify-normal border-t  border-white border-b"
+        className="About-Section px-5 mdsm:px-12 py-24 text-white bg-secondary h-full w-full flex flex-col lg:flex-row gap-y-5 mdsm:gap-y-10 lg:gap-x-10 justify-center lg:justify-normal border-t  border-white border-b relative"
       >
-        <div className="about-images w-full lg:w-1/2 relative flex flex-col justify-center">
-          <div
-            className="about-img-1 pl-5 w-full"
-            style={{
-              clipPath: "inset(5% 20% 15% 10% round 5% 20% 0 10%)",
-            }}
-          >
-            <img src={progMainAboutImg} alt="" className="w-full" />
+        <div className="blue-img absolute left-0 top-[10%] z-30 pointer-events-none">
+          <img src={BigLeftBlueImg} alt="" />
+        </div>
+        <div className="about-images z-50 w-full lg:w-1/2 relative flex flex-col justify-start items-center">
+          <div className="about-img-1 pl-5 ">
+            <img
+              src={progMainAboutImg}
+              alt=""
+              className="h-[80%] rounded-3xl shadow-custom-green"
+            />
           </div>
         </div>
-        <div className="about-content relative w-full lg:w-1/2 pr-0 mdsm:pr-10">
+        <div className="about-content relative z-40 w-full lg:w-1/2 pr-0 mdsm:pr-10">
           <div className="content-img absolute right-0 top-0">
             <img src={CircleAboutImg} alt="" />
           </div>
           <div className="about-all-content">
-            <h1 className="flex text-[#1e8947] text-xl mdsm:text-2xl items-center py-2 relative mr-0 mdsm:mr-4">
-              <span className="h-3 w-3 bg-[#1e8947] rounded-full mr-3"></span>
+            <h1 className="flex text-primary text-xl mdsm:text-2xl items-center py-2 relative mr-0 mdsm:mr-4">
+              <span className="h-3 w-3 bg-primary rounded-full mr-3"></span>
               About our Institute
             </h1>
             <h1 className="font-semibold text-2xl mdsm:text-xl py-2">
@@ -72,7 +75,7 @@ const About = () => {
                 ].map((currElem, currIndex) => {
                   return (
                     <h1 key={currIndex} className="my-5 text-sm mdsm:text-md">
-                      <span className="text-[#1e8947] mr-1 mdsm:mr-3">
+                      <span className="text-primary mr-1 mdsm:mr-3">
                         <IoMdCheckboxOutline className="w-5 h-5 inline-block" />
                       </span>
                       {currElem}
@@ -94,7 +97,7 @@ const About = () => {
                         currIndex == 0 ? "mb-5" : "my-5"
                       } mdsm:my-5 text-sm mdsm:text-md`}
                     >
-                      <span className="text-[#1e8947] mr-1 mdsm:mr-3">
+                      <span className="text-primary mr-1 mdsm:mr-3">
                         <IoMdCheckboxOutline className="w-5 h-5 inline-block" />
                       </span>
                       {currElem}

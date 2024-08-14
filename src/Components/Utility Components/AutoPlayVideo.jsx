@@ -7,7 +7,7 @@ const AutoPlayVideo = () => {
       style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}
     >
       <iframe
-        src="https://www.youtube.com/embed/KGdaJgrXsYI?autoplay=1&mute=1&loop=1&playlist=KGdaJgrXsYI"
+        src="https://www.youtube.com/embed/KGdaJgrXsYI?autoplay=1&mute=1&loop=1&playlist=KGdaJgrXsYI&controls=1"
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

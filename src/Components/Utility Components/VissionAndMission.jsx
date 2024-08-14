@@ -3,11 +3,15 @@ import "./ChooseUs.css";
 import VissionAndMissionImg from "../../Assets/Vission.jpg";
 import "./ChooseUs.css";
 import Fade from "react-reveal/Fade";
+import BgGreenLeftImg from "../../Assets/4.svg";
 const VissionAndMission = () => {
   return (
     <Fade bottom duration={1000}>
-      <section className="px-5 py-16 bg-[#242424] flex justify-center items-center">
-        <div className="bg-white w-full mdsm:w-[80%] rounded-3xl shadow-inner-custom px-4 mdsm:px-8  py-5 mdsm:py-12 flex items-start mdsm:items-center justify-start mdsm:justify-center flex-col-reverse mlg:flex-row gap-10">
+      <section className="px-5 py-16 bg-secondary  flex justify-center items-center relative">
+        <div className="bg-green-img absolute top-0 left-0 z-30">
+          <img src={BgGreenLeftImg} alt="" />
+        </div>
+        <div className="bg-white w-full mdsm:w-[80%] rounded-3xl shadow-inner-custom px-4 mdsm:px-8  py-5 mdsm:py-12 flex items-start mdsm:items-center justify-start mdsm:justify-center flex-col-reverse mlg:flex-row gap-10 z-50">
           <div className="vissionAndMission-imgn mdsm:w-[40%] w-[100%] h-full">
             <img
               src={VissionAndMissionImg}

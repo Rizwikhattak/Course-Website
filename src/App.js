@@ -26,11 +26,6 @@ const App = () => {
         </Routes>
 
         <Footer />
-
-        {/* <Cards /> */}
-        {/* <Services /> */}
-        {/* <Products />
-        <ContactUs /> */}
       </Router>
     </>
   );

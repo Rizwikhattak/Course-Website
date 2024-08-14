@@ -3,7 +3,7 @@ import Slide from "react-reveal/Slide";
 
 const Motive = () => {
   return (
-    <section className=" px-2 mdsm:px-5 py-16 bg-[#242424]">
+    <section className=" px-2 mdsm:px-5 py-16 bg-secondary">
       <h1 className="text-3xl font-semibold text-white pl-0 mdsm:pl-8">
         This is how we define our motive to prepare you, for you.
       </h1>
